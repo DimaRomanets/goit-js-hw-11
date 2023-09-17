@@ -14,9 +14,9 @@ export function createMarkup(photos) {
       }) => {
         return /*html*/ `
             
-        <div class="card-link js-card-link">
+        <div class="js-card-link">
         <div class="photo-card">
-        <a href='${largeImageURL}'>
+        <a href='${largeImageURL}' class="card-link" >
           <img class="photo" src="${webformatURL}" alt="${tags}" loading="lazy" />
           </a>
           <div class="info">
