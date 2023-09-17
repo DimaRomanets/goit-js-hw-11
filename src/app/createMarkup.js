@@ -13,9 +13,11 @@ export function createMarkup(photos) {
         downloads,
       }) => {
         return /*html*/ `
-            <a href='${largeImageURL}' class="card-link js-card-link">
+            
             <div class="photo-card">
+            <a href='${largeImageURL}' class="card-link js-card-link">
               <img class="photo" src="${webformatURL}" alt="${tags}" loading="lazy" />
+              </a>
               <div class="info">
                 <div class="info-item info-item-likes">
                   <button type="button" class="circle" onclick="style.boxShadow='inset -1px -1px 3px white, inset 1px 1px 3px rgba(0, 0, 0, 0.1)'">
@@ -39,8 +41,7 @@ export function createMarkup(photos) {
                   ${downloads}
                 </p>
               </div>
-            </div>
-            </a>`;
+            </div>`;
       }
     )
     .join('');
